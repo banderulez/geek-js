@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <script class="1">
+    var a = 1, b = 1, c, d;
+c = ++a; alert(c);           // 2   "++a" возвращает значение операнда с добавленной к нему единицей
+d = b++; alert(d);           // 1   "b++" возвращает значение операнда перед добавлением к нему единицы
+c = (2+ ++a); alert(c);      // 5    "а" было 2, после еще одного "++а" становится 3, итог 2+3=5
+d = (2+ b++); alert(d);      // 4    "b" было 2, после еще одного "b++" становится 3, но добавляется на 1 меньше поэтому 2+2=4
+alert(a);                    // 3    описал выше 
+alert(b);                    // 3    описал выше
+    
+    </script>
+    
+    
+    <script class="2">
+        var a = 2;
+        var x = 1 + (a *= 2); // (a *=2) это сокращенный вариант от а=а*2. Итог 1+4=5
+    </script>
+    
+    
+        
+	<script class="3">
+		var a = 1;
+		var b = 2;
+		if (a > 0 && b > 0){
+		x = a - b;
+		alert(x);
+		} else if (a < 0 && b < 0){
+			x = a * b;
+			alert (x);
+			}
+		  else if (a > 0 && b < 0 || a < 0 && b > 0) {
+		  x = a + b;
+		  alert (x);
+		  }
+		
+	</script>
+   
+       <script class="4">
+       var a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+       var rand = a[Math.floor(Math.random() * a.length)];
+       switch(rand) {
+            case 0:
+               alert ('число 0');
+               break;
+            case 1:
+               alert ('число 1');
+               break;
+            case 2:
+               alert ('число 2');
+               break;
+            case 3:
+               alert ('число 3');
+               break;
+            case 4:
+               alert ('число 4');
+               break;
+            case 5:
+               alert ('число 5');
+               break;
+            case 6:
+               alert ('число 6');
+               break;
+            case 7:
+               alert ('число 7');
+               break;
+            case 8:
+               alert ('число 8');
+               break;
+            case 9:
+               alert ('число 9');
+               break;
+            case 10:
+               alert ('число 10');
+               break;
+            case 11:
+               alert ('число 11');
+               break;
+            case 12:
+               alert ('число 12');
+               break;
+            case 13:
+               alert ('число 13');
+               break;
+            case 14:
+               alert ('число 14');
+               break;
+            case 15:
+               alert ('число 15');
+               break;
+               
+       }
+    </script>
+    
+   <script class="5">
+        var a = 2;
+        var b = 4;
+    function plus() {
+            return a+b;
+        }
+        let sum = plus();
+       alert(sum);
+    
+    function minus() {
+        return a-b;
+        }
+        let sub = minus();
+       alert(sub);
+       
+    function mult() {
+        return a*b;
+        }
+        let sum = mult();
+       alert(sum);
+       
+    function div() {
+        return a/b;
+        }
+        let rat = div();
+       alert(rat);
+    </script>
+    
+     <script class="6">
+        function mathOperation(arg1, arg2, operation) {
+            switch(operation){
+       				 case 'sum':
+           				 return arg1 + arg2;
+           				 break;
+       				 case 'minus':
+           				 return arg1 - arg2;
+            			 break;
+                    case 'mult':
+           				 return arg1 * arg2;
+            			 break;
+        			 case 'div':
+                         return arg1 / arg2;
+            			 break;
+       	   				}
+        }
+    </script>
+    
+    <script class="7">
+        // Тут можно голову сломать :) прочитал ни одну статью ))
+        alert( null > 0 );  // (1) false Сравнения преобразуют null в число, рассматривая его как 0.
+        alert( null == 0 ); // (2) false Результат ни к чему не приводит и выводится значение по умолчанию.
+        alert( null >= 0 ); // (3) true Сравнения преобразуют null в число, рассматривая его как 0.
+    </script>
+        
+    <script class="8">
+            function power(val, pow) {
+                if (pow == 1) {
+                    return x;
+                } else {
+                    return val * power(val, pow - 1);
+                }
+            }
+        alert( power(2, 3)); 
+    </script>
+    
+</body>
+</html>
