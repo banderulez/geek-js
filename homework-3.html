@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Задание 2
+        'use strict'
+        let i = 0;
+        for (let i = 0; i <= 10; i++) {
+            if (i == 0) {
+                alert(i + " - это ноль");
+            } else if (i % 2 == 1) {
+                alert(i + " - нечетное число");
+            } else if (i % 2 == 0) {
+                alert(i + " - четное число");
+            }
+        }
+
+    </script>
+
+    <script>
+        // Задание 3
+        'use strict'
+        const post = {
+            author: "John", //вывести этот текст
+            postId: 23,
+            comments: [{
+                    userId: 10,
+                    userName: "Alex",
+                    text: "lorem ipsum",
+                    rating: {
+                        likes: 10,
+                        dislikes: 2 //вывести это число
+                    }
+                },
+                {
+                    userId: 5, //вывести это число
+                    userName: "Jane",
+                    text: "lorem ipsum 2", //вывести этот текст
+                    rating: {
+                        likes: 3,
+                        dislikes: 1
+                    }
+                },
+            ]
+        }
+        console.log(post.author);
+        console.log(post.comments[0].rating.dislikes);
+        console.log(post.comments[1].userId;)
+        console.log(post.comments[1].text;)
+
+    </script>
+
+    <script>
+        // Задание 4
+        'use strict'
+        const products = [{
+                id: 3,
+                price: 200,
+            },
+            {
+                id: 4,
+                price: 900,
+            },
+            {
+                id: 1,
+                price: 1000,
+            },
+        ];
+        products.map(function(item) {
+            item.price = item.price - item.price * 0.15;
+        });
+        console.log(products);
+
+    </script>
+
+    <script>
+        // Задание 5
+        'use strict'
+        const products = [{
+                id: 3,
+                price: 127,
+                photos: [
+                    "1.jpg",
+                    "2.jpg",
+                ]
+            },
+            {
+                id: 5,
+                price: 499,
+                photos: []
+            },
+            {
+                id: 10,
+                price: 26,
+                photos: [
+                    "3.jpg"
+                ]
+            },
+            {
+                id: 8,
+                price: 78,
+            },
+        ];
+
+        const result = products.filter(product => "photos" in product);
+        console.log(result);
+
+    </script>
+
+    <script>
+        // Задание 7
+        'use strict'
+        let hill = "x"
+        console.log(hill)
+        for (let x = 0; x < 20; x++) {
+            console.log(hill += "xx")
+        }
+
+    </script>
+
+</body>
+
+
+</html>
